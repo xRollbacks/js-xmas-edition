@@ -19,14 +19,14 @@ function probarValidarCiudad() {
 	);
 }
 
-function probarValidadComportamiento() {
+function probarValidarComportamiento() {
 	console.assert(
 		validarComportamiento("") === "No elegiste ningun comportamiento",
 		"Hay algo que no funciona, algo deberia ser seleccionado por default"
 	);
 	console.assert(
-		validarComportamiento($comportamiento) === "",
-		"Algo se rompio"
+		validarComportamiento("asd") === "",
+		"validarComportamiento no deberia admitir strings vacios"
 	);
 }
 
@@ -43,7 +43,7 @@ function probarValidarDescripcionRegalo() {
 		"La funcion no deberia permitir mas de 100 caracteres"
 	);
 }
-probarValidadComportamiento();
+probarValidarComportamiento();
 probarValidarNombre();
 probarValidarCiudad();
 probarValidarDescripcionRegalo();
